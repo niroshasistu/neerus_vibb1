@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Memories Gallery</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* =========================
+   GLOBAL STYLES
+========================= */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Smooth transition for all buttons */
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        /* =========================
+   NAVBAR
+========================= */
+        .navbar-bg {
+            background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+            padding: 10px 30px;
+        }
+
+        /* Brand */
+        .navbar-brand {
+              font-family:'Playfair Display', serif;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        /* Nav links */
+        .nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            margin: 0 10px;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #3c096c;
+        }
+
+        /* Navbar toggler */
+        .navbar-toggler {
+            background-color: #ffffff;
+            border: none;
+        }
+
+        /* =========================
+   GALLERY VIDEO HERO
+========================= */
+        .gallery-video-hero {
+            position: relative;
+            height: 65vh;
+            overflow: hidden;
+        }
+
+        .gallery-video-hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+
+        .gallery-video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-video-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery-video-content h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .gallery-video-content p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+
+
+        .sticky-gallery {
+            background: linear-gradient(135deg, #f7f2ff, #eee5ff);
+        }
+
+
+        .sticky-title {
+            color: #6f42c1;
+            font-size: 2.6rem;
+        }
+
+        .sticky-sub {
+            color: #7d6bb3;
+            font-size: 1rem;
+        }
+
+
+        .sticky-note {
+            background: linear-gradient(135deg, #d6c7ff, #f4efff);
+            padding: 15px;
+            border-radius: 14px;
+            box-shadow: 0 15px 35px rgba(111, 66, 193, 0.35);
+            position: relative;
+            transition: all 0.45s ease;
+            cursor: pointer;
+        }
+
+
+        .sticky-note::before {
+            content: "📌";
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 22px;
+        }
+
+
+        .sticky-note img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .sticky-note p {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #4b2a91;
+            text-align: center;
+        }
+
+
+        .sticky-note:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 30px 65px rgba(111, 66, 193, 0.55);
+        }
+
+        .rotate-1 {
+            transform: rotate(-2deg);
+        }
+
+        .rotate-2 {
+            transform: rotate(2deg);
+        }
+
+        .rotate-3 {
+            transform: rotate(-1deg);
+        }
+
+
+        @media (max-width: 768px) {
+            .sticky-title {
+                font-size: 2rem;
+            }
+
+            .sticky-note img {
+                height: 160px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-video-hero video {
+                display: none;
+            }
+
+            .gallery-video-hero {
+                background: url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80") center/cover no-repeat;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-bg">
+        <div class="container-fluid navbar-bg">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="neerus vibes.png" alt="Logo"
+                    width="40" height="30" class="me-2" />
+                Neerus Vibes
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navbar-bg" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" />
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- ================= VIDEO HERO - GALLERY ================= -->
+    <section class="gallery-video-hero">
+        <video autoplay muted loop playsinline>
+            <source src="video-bg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="gallery-video-overlay"></div>
+
+        <div class="gallery-video-content text-center text-white">
+            <h1>Our Event Gallery</h1>
+            <p>Captured moments, timeless memories</p>
+        </div>
+    </section>
+
+
+
+    <section class="sticky-gallery py-5">
+        <div class="container">
+
+            <div class="text-center mb-5">
+                <h2 class="fw-bold sticky-title">Our Memory Wall</h2>
+                <p class="sticky-sub">Little moments, big memories 💜</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="https://ik.imagekit.io/sistu21/wedding.jpg">
+                        <p>Wedding Bliss</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-2">
+                        <img src="https://ik.imagekit.io/sistu21/birthday12.jpg">
+                        <p>Birthday Bash</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-3">
+                        <img src="https://ik.imagekit.io/sistu21/engagement.jpeg">
+                        <p>Engagement Day</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="https://ik.imagekit.io/sistu21/festive.jpg">
+                        <p>Festive Decor</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-2">
+                        <img src="https://ik.imagekit.io/sistu21/te.jpg?updatedAt=1766941362015">
+                        <p>Corporate Event</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-3">
+                        <img src="https://ik.imagekit.io/sistu21/catering.jpg">
+                        <p>Catering Setup</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="https://ik.imagekit.io/sistu21/stage.jpg">
+                        <p>Stage Decoration</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-2">
+                        <img src="https://ik.imagekit.io/sistu21/haldi.jpg">
+                        <p>Haldi Ceremony</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-3">
+                        <img src="https://ik.imagekit.io/sistu21/night%20party.jpg">
+                        <p>Night Party</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="sticky-note rotate-1">
+                        <img src="https://ik.imagekit.io/sistu21/grandcelebration.jpg">
+                        <p>Grand Celebration</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  
+</body>
+
+</html>

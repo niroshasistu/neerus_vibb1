@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events | Neerus Vibes</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+        /* =========================
+   GLOBAL STYLES
+========================= */
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Smooth transition for all buttons */
+        .btn {
+            transition: all 0.3s ease;
+        }
+
+        /* =========================
+   NAVBAR
+========================= */
+        .navbar-bg {
+            background: linear-gradient(90deg, #e0c3fc, #8ec5fc);
+            padding: 10px 30px;
+        }
+
+        /* Brand */
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 1.25rem;
+        }
+
+        /* Nav links */
+        .nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            margin: 0 10px;
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #3c096c;
+        }
+
+        /* Navbar toggler */
+        .navbar-toggler {
+            background-color: #ffffff;
+            border: none;
+        }
+
+        .event-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)),
+                url("event2.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .body {
+            background: url("event2.jpg");
+        }
+
+        /* Cards */
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            transition: 0.3s ease;
+        }
+
+        .btn-purple {
+            background-color: var(--purple-main);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-purple:hover {
+            background-color: var(--purple-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-bg">
+        <div class="container-fluid navbar-bg">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="neerus vibes.png" alt="Logo" width="40" height="30" class="me-2" />
+                Neerus Vibes
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navbar-bg" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" />
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="event-hero">
+        <div>
+            <h1 class="display-4 fw-bold">Our Events</h1>
+            <p class="lead mt-2">“Neeru’s Vibes — where moments turn magical.”</p>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Events We Organize</h2>
+                <p class="text-muted">“From Intimate Moments to Grand Memories — Join Us for a Celebration Like No
+                    Other.”</p>
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <img src="https://ik.imagekit.io/sistu21/birthday%20(2).jpg" class="card-img-top" alt="Birthday">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Birthday Parties</h5>
+                            <p class="text-muted">
+                                Theme-based birthday celebrations with decor, cake & fun activities.
+                            </p>
+                            <a href="index.html#contact" class="btn btn-purple">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTaAV5WNvwH5bE5xKmNLCCLf5lELWy9eMfg&s"
+                            class="card-img-top" alt="Wedding">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Wedding Events</h5>
+                            <p class="text-muted">
+                                Elegant wedding planning with decoration, catering & coordination.
+                            </p>
+                            <a href="index.html#contact" class="btn btn-purple">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <img src="https://www.shutterstock.com/image-photo/corporate-event-celebration-restaurant-hall-600nw-1561843807.jpg"
+                            class="card-img-top" alt="Corporate">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Corporate Events</h5>
+                            <p class="text-muted">
+                                Professional corporate meetings, conferences & office events.
+                            </p>
+                            <a href="index.html#contact" class="btn btn-purple">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <img src="https://media.designcafe.com/wp-content/uploads/2020/09/21140648/festival-decoration-ideas-at-home.jpg"
+                            class="card-img-top" alt="Festival">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Festive Celebrations</h5>
+                            <p class="text-muted">
+                                Traditional and modern festival decorations & arrangements.
+                            </p>
+                            <a href="index.html#contact" class="btn btn-purple">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <img src="https://thumbs.dreamstime.com/b/wedding-table-set-dining-35069221.jpg"
+                            class="card-img-top" alt="Engagement">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Engagements</h5>
+                            <p class="text-muted">
+                                Stylish engagement ceremonies with elegant themes.
+                            </p>
+                            <a href="index.html#contact" class="btn btn-purple">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card shadow h-100 border-0">
+                        <img src="https://cdn.balloondekor.com/14/1754654605910.webp" class="card-img-top"
+                            alt="Baby Shower">
+                        <div class="card-body text-center">
+                            <h5 class="fw-bold">Baby Showers</h5>
+                            <p class="text-muted">
+                                Cute, colorful and memorable baby shower decorations.
+                            </p>
+                            <a href="index.html#contact" class="btn btn-purple">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

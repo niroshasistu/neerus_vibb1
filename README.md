@@ -1,1 +1,2 @@
-# neerus_vibb1
+# event_manager
+https://niroshasistu.github.io/Event_Management/
